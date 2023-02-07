@@ -25,6 +25,7 @@ To install `openvino runtime`, you could simply use `pip install onnxruntime-ope
 To use this deployment, you could follow the following code:  
 ```py
 # Load a onnx pipeline firstly.  
+from diffusers import OnnxStableDiffusionPipeline
 onnx_pipe = OnnxStableDiffusionPipeline.from_pretrained(
     "OFA-Sys/small-stable-diffusion-v0",
     revision="onnx",
