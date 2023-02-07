@@ -12,10 +12,16 @@ Here are some experimental results on stable diffusion v1.4 for comparison with 
 | Pipeline  | Pytorch CPU | Onnx         | OpenVINO        |
 | --------- | ----------- | ------------ | --------------- |
 | Time Cost | 397s        | 77s ± 2.56 s | 33.9 s ± 247 ms |
-| Speedup   | 1           | 5.2          | 11.7            |
+| Speedup   | 1           | 5.2          | 11.7            |  
+
 *Test setting: CPU Intel(R) Xeon(R) Platinum 8369B CPU @ 2.90GHz / PNDM scheduler 50 steps)*
 
-#### Prerequisites 
+#### Prerequisites  
+There are several limitations of OpenVINO now, Therefore, we only support the following platforms for CPU speedup.  
++ Ubuntu 18.04, 20.04, RHEL(CPU only) or Windows 10 - 64 bit
++ Python 3.7, 3.8 or 3.9 for Linux and only Python3.9 for Windows  
+
+**Requirements**  
 + diffuers
 + transformers 
 + openvino runtime
